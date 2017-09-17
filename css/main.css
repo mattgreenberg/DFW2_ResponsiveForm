@@ -68,6 +68,9 @@ fieldset {
 fieldset:nth-child(2) {
   background: #efefef; }
 
+fieldset:nth-child(3) {
+  background: #dfdfdf; }
+
 fieldset legend {
   position: absolute;
   top: 0;
@@ -165,21 +168,66 @@ div.arrow {
 div.arrow:after {
   content: "v";
   font-size: 2em;
-  padding: 2px 4px;
-  border-radius: 20%;
+  padding: 7px 7px;
   font-weight: 800;
-  border: 2px solid #222;
+  border: 1px solid #999;
+  color: #999;
   position: absolute;
-  right: 10px;
+  right: 6px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
 
 select {
   width: 100%;
+  display: block;
   font-size: 2em;
   font-weight: 800;
   background: #ddd;
   padding: 10px;
   border: 1px solid #222;
-  border-radius: 0; }
+  border-radius: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+#product_list {
+  font-size: 2.5em;
+  margin: 0 0 30px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc; }
+
+#product_list li span {
+  float: right; }
+
+p.shipping {
+  font-size: 2.5em;
+  color: #777; }
+
+p.shipping span {
+  float: right; }
+
+p.total {
+  font-size: 2.5em;
+  font-weight: 800;
+  margin: 5px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc; }
+
+p.total span {
+  float: right; }
+
+div.shipping_label {
+  font-size: 2em; }
+
+div.shipping_label span {
+  display: block;
+  padding: 5px 0;
+  font-weight: 800;
+  margin-bottom: 20px; }
+
+input[type=submit] {
+  border: none;
+  background: #27AE61;
+  color: #fff;
+  font-weight: 400; }
