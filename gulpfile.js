@@ -36,3 +36,8 @@ gulp.task('browser-sync', ()=>{
 		}
 	});
 });
+
+// Watch Task
+gulp.task('watch', ['browser-sync', 'scss'], ()=>{
+	gulp.watch('./scss/**/*.scss', ['scss']);
+});
