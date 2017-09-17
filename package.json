@@ -1,7 +1,7 @@
 {
   "name": "responsiveform",
   "version": "1.0.0",
-  "description": "Build a response web form that is A11y compliant",
+  "description": "Build a responsive web form that is A11y compliant",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/mattgreenberg/DFW2_ResponsiveForm/issues"
   },
-  "homepage": "https://github.com/mattgreenberg/DFW2_ResponsiveForm#readme"
+  "homepage": "https://github.com/mattgreenberg/DFW2_ResponsiveForm#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0"
+  }
 }
