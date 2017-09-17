@@ -59,11 +59,25 @@ body, html {
 form {
   display: block;
   width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
   height: 100%; }
+  @media (min-width: 900px) {
+    form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      max-width: 1200px;
+      -webkit-box-pack: stretch;
+          -ms-flex-pack: stretch;
+              justify-content: stretch; } }
 
 fieldset {
   padding: 40px 10px 10px 10px;
   position: relative; }
+  @media (min-width: 900px) {
+    fieldset {
+      width: 33.33333%; } }
 
 fieldset:nth-child(2) {
   background: #efefef; }
