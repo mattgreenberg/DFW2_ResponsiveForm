@@ -91,7 +91,8 @@ label {
   font-weight: 800;
   color: #222;
   display: block;
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-bottom: 5px; }
 
 #size_group,
 #color_group {
@@ -133,3 +134,52 @@ label {
 #size_group li[aria-checked="true"],
 #color_group li[aria-checked="true"] {
   border: 2px solid #000; }
+
+input {
+  width: 100%;
+  font-size: 2em;
+  font-weight: 800;
+  background: #ddd;
+  padding: 10px;
+  border: 1px solid #222; }
+
+div.ig_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+div.g1 div.input_group {
+  width: 49%;
+  display: block; }
+
+div.g2 div.input_group {
+  width: 32%;
+  display: block; }
+
+div.arrow {
+  position: relative; }
+
+div.arrow:after {
+  content: "v";
+  font-size: 2em;
+  padding: 2px 4px;
+  border-radius: 20%;
+  font-weight: 800;
+  border: 2px solid #222;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+select {
+  width: 100%;
+  font-size: 2em;
+  font-weight: 800;
+  background: #ddd;
+  padding: 10px;
+  border: 1px solid #222;
+  border-radius: 0; }
