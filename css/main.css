@@ -42,7 +42,7 @@ table {
   border-spacing: 0; }
 
 body, html {
-  font-sizing: 62.5%;
+  font-size: 62.5%;
   font-family: Helvetica, Ariel, sans-serif;
   background: #f9f9f9;
   min-width: 320px; }
@@ -55,3 +55,81 @@ body, html {
   content: "";
   display: table;
   clear: both; }
+
+form {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+fieldset {
+  padding: 40px 10px 10px 10px;
+  position: relative; }
+
+fieldset:nth-child(2) {
+  background: #efefef; }
+
+fieldset legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 3em;
+  font-weight: 800; }
+
+fieldset img {
+  width: 100%;
+  margin-bottom: 10px; }
+
+p.product_price {
+  display: block;
+  font-size: 2.5em;
+  font-weight: 800;
+  text-align: right; }
+
+label {
+  font-size: 2em;
+  font-weight: 800;
+  color: #222;
+  display: block;
+  margin-top: 10px; }
+
+#size_group,
+#color_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 5px 0; }
+
+#size_group li {
+  padding: 12px 0;
+  text-align: center;
+  font-size: 2.5em;
+  width: 30%;
+  font-weight: 800;
+  background: #C4C4C4;
+  border: 2px solid #c4c4c4; }
+
+#color_group li {
+  height: 40px;
+  width: 20%; }
+
+#color_group li:nth-child(1) {
+  background: #27AE61; }
+
+#color_group li:nth-child(2) {
+  background: #EB5757; }
+
+#color_group li:nth-child(3) {
+  background: #4F4F4F; }
+
+#color_group li:nth-child(4) {
+  background: #2C9CDB; }
+
+#size_group li[aria-checked="true"],
+#color_group li[aria-checked="true"] {
+  border: 2px solid #000; }
