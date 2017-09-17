@@ -1,0 +1,19 @@
+{
+  "name": "responsiveform",
+  "version": "1.0.0",
+  "description": "Build a response web form that is A11y compliant",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattgreenberg/DFW2_ResponsiveForm.git"
+  },
+  "author": "Matthew Greenberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattgreenberg/DFW2_ResponsiveForm/issues"
+  },
+  "homepage": "https://github.com/mattgreenberg/DFW2_ResponsiveForm#readme"
+}
