@@ -18,10 +18,19 @@
 		<fieldset>
 			<legend>Product Name</legend>
 			<img src="#" alt="image of product">
-			<label>Select a size</label>
-			<button>S</button>
-			<button>M</button>
-			<button>L</button>
+			<label id="rg1_label">Select a size</label>
+			<ul role="radiogroup" aria-labeledby="rg1_label">
+				<li id="rg1-1" tabindex="-1" role="radio" aria-checked="false">S</li>
+				<li id="rg1-2" tabindex="-1" role="radio" aria-checked="false">M</li>
+				<li id="rg1-3" tabindex="-1" role="radio" aria-checked="false">L</li>
+			</ul>
+			<label id="rg2_label">Select a color</label>
+			<ul role="radiogroup" aria-labeledby="rg2_label">
+				<li id="rg2-1" tabindex="-1" rold="radio" aria-checked="false"></li>
+				<li id="rg2-2" tabindex="-1" rold="radio" aria-checked="false"></li>
+				<li id="rg2-3" tabindex="-1" rold="radio" aria-checked="false"></li>
+				<li id="rg2-4" tabindex="-1" rold="radio" aria-checked="false"></li>
+			</ul>
 		</fieldset>
 		<fieldset>
 			<legend>Shipping Details</legend>
