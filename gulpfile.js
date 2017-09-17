@@ -27,3 +27,12 @@ gulp.task('scss', ()=>{
 	}));
 
 });
+
+// Browser Sync
+gulp.task('browser-sync', ()=>{
+	browserSync.init({
+		server: {
+			baseDir: './'
+		}
+	});
+});
