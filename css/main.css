@@ -258,6 +258,9 @@ div.shipping_label span {
   font-weight: 800;
   margin-bottom: 20px; }
 
+#sl {
+  margin-bottom: 20px; }
+
 input[type=submit] {
   border: none;
   background: #27AE61;

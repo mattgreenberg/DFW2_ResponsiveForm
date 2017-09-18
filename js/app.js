@@ -16,6 +16,7 @@ var icountry = document.querySelector('#cxcountry');
 var form = document.querySelector('#go');
 var itemDetails = document.querySelector('p.deets');
 var errors = document.querySelector('p.error');
+var shipLabel = document.querySelector('#sl');
 
 // ***********************************************
 // Functionality for custom button controls
@@ -111,9 +112,9 @@ CheckValidity.prototype.display = function(){
 // ***********************************************
 form.addEventListener('click', function(e){
 	
+	e.preventDefault();
 	errors.innerHTML = "";
 	errors.style.display = "none";
-	e.preventDefault();
 	var name = new CheckValidity(iname, 'Name');
 	var email = new CheckValidity(iemail, 'Email');
 	var address = new CheckValidity(iadd1, 'Address');
@@ -123,6 +124,33 @@ form.addEventListener('click', function(e){
 	var country = new CheckValidity(icountry, 'Country');
 
 });
+
+form.addEventListener('submit', function(e){
+
+	alert('going');
+
+});
+
+iname.addEventListener('input', updateShipLabel);
+iadd1.addEventListener('input', updateShipLabel);
+iadd2.addEventListener('input', updateShipLabel);
+icity.addEventListener('input', updateShipLabel);
+istate.addEventListener('input', updateShipLabel);
+izip.addEventListener('input', updateShipLabel);
+icountry.addEventListener('change', updateShipLabel);
+
+function updateShipLabel(){
+
+	shipLabel.innerHTML = iname.value + '<br>' +
+						  iadd1.value + '<br>' +
+						  ((iadd2.value.trim() != '')?iadd2.value + '<br>': '') +
+						  icity.value + ' ' + istate.value + ' ' + izip.value + ' ' +
+						  icountry.value;
+	;
+
+};
+
+
 
 
 
