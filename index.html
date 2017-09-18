@@ -28,22 +28,22 @@
 			</ul>
 			<label id="rg2_label">Select a color</label>
 			<ul id="color_group" role="radiogroup" aria-labeledby="rg2_label">
-				<li id="rg2-1" tabindex="-1" rold="radio" aria-checked="true" aria-label="green"></li>
-				<li id="rg2-2" tabindex="-1" rold="radio" aria-checked="false" aria-label="red"></li>
-				<li id="rg2-3" tabindex="-1" rold="radio" aria-checked="false" aria-label="black"></li>
-				<li id="rg2-4" tabindex="-1" rold="radio" aria-checked="false" aria-label="blue"></li>
+				<li id="rg2-1" tabindex="-1" role="radio" aria-checked="true" aria-label="green"></li>
+				<li id="rg2-2" tabindex="-1" role="radio" aria-checked="false" aria-label="red"></li>
+				<li id="rg2-3" tabindex="-1" role="radio" aria-checked="false" aria-label="black"></li>
+				<li id="rg2-4" tabindex="-1" role="radio" aria-checked="false" aria-label="blue"></li>
 			</ul>
 		</fieldset>
 		<fieldset>
 			<legend>Shipping Details</legend>
 			<label for="cxname">Full Name</label>
-			<input type="text" name="cxname" id="cxname">
+			<input type="text" name="cxname" id="cxname" required>
 			<label for="cxemail">Email</label>
-			<input type="email" name="cxemail" id="cxemail">
+			<input type="email" name="cxemail" id="cxemail" required pattern="[0-9a-zA-Z\-_]*[@]{1}[a-zA-Z0-9\-]*\.[a-zA-Z]*">
 			<div class="ig_box g1">
 				<div class="input_group">
 					<label for="cxaddress1">Address</label>
-					<input type="text" name="cxaddress1" id="cxaddress1">
+					<input type="text" name="cxaddress1" id="cxaddress1" required>
 				</div>
 				<div class="input_group">
 					<label for="cxaddress2">Address 2</label>
@@ -53,20 +53,20 @@
 			<div class="ig_box g2">
 				<div class="input_group">
 					<label for="cxcity">City</label>
-					<input type="text" name="cxcity" id="cxcity">
+					<input type="text" name="cxcity" id="cxcity" required>
 				</div>
 				<div class="input_group">
 					<label for="cxstate">State</label>
-					<input type="text" name="cxstate" id="cxstate">
+					<input type="text" name="cxstate" id="cxstate" required>
 				</div>
 				<div class="input_group">
 					<label for="cxzip">Zip</label>
-					<input type="text" name="cxzip" id="cxzip">
+					<input type="text" name="cxzip" id="cxzip" required>
 				</div>
 			</div>
 			<label for="cxcountry">Country</label>
 			<div class="arrow">
-				<select name="cxcountry" id="cxcountry">
+				<select name="cxcountry" id="cxcountry" required>
 					<optgroup label="Common">
 						<option value="US">United States</option>
 						<option value="CA">Canada</option>
@@ -323,12 +323,13 @@
 						<option value="ZW">Zimbabwe</option>
 					</optgroup>
 				</select>
-			</div>		
+			</div>
+			<p class="error" role="alert"></p>		
 		</fieldset>
 		<fieldset>
 			<legend>Order Summery</legend>
 			<ul id="product_list">
-				<li>Product Name<span>$20.00</span></li>
+				<li>Product Name<span>$20.00</span><p class="deets">Size </p></li>
 			</ul>
 			<p class="shipping">Shipping<span>Free</span></p>
 			<p class="total">Total<span>$20.00</span></p>
@@ -336,8 +337,9 @@
 				<span>Shipping Address</span>
 				<p></p>
 			</div>
-			<input type="submit" name="submit" value="Complete Order">
+			<input id="go" type="submit" name="submit" value="Complete Order">
 		</fieldset>
 	</form>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
