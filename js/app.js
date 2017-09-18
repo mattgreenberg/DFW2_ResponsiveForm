@@ -91,7 +91,7 @@ CheckValidity.prototype.getMessages = function(){
 	}
 
 	if(status.patternMismatch){
-		this.addError('Please enter a valid email address');
+		this.addError('Please enter a valid ' + this.type);
 	}
 
 	return (this.errors.length>0)?this.errors:false;
@@ -122,14 +122,15 @@ form.addEventListener('click', function(e){
 	var state = new CheckValidity(istate, 'State');
 	var zip = new CheckValidity(izip, 'Zip Code');
 	var country = new CheckValidity(icountry, 'Country');
+	if(errors.innerHTML == ""){ // The most lazy no error check ever xD
+		formSubmited();
+	}
 
 });
 
-form.addEventListener('submit', function(e){
-
-	alert('going');
-
-});
+function formSubmited(){
+	alert('WOOHOO');
+};
 
 iname.addEventListener('input', updateShipLabel);
 iadd1.addEventListener('input', updateShipLabel);
