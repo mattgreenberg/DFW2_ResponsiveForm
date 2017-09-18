@@ -73,6 +73,10 @@ for(var i=0; i<colorGroupLIS.length; i++){
 // ***********************************************
 // Check Form Validity
 // ***********************************************
+
+// I would have used es6ß class, but they are not supported well
+// so i use prototype chaining for compatibility
+// http://caniuse.com/#feat=es6-class
 function CheckValidity(input, type){
 	this.input = input;
 	this.type = type;
