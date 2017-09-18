@@ -129,7 +129,13 @@ form.addEventListener('click', function(e){
 });
 
 function formSubmited(){
-	alert('WOOHOO');
+	var fieldset = document.querySelector('fieldset:nth-child(3)').cloneNode(true);
+	fieldset.removeChild(fieldset.lastElementChild);
+	var complete = document.querySelector('div.complete');
+	complete.appendChild(fieldset);
+	complete.insertAdjacentHTML('beforeend', '<span class="check">&#x2713;</span>');
+	document.querySelector('form').style.display = "none";
+	complete.style.display = "block";
 };
 
 iname.addEventListener('input', updateShipLabel);

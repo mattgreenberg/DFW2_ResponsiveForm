@@ -192,3 +192,35 @@ input[type=submit]{
 	color: #fff;
 	font-weight: 400;
 }
+div.complete{
+	display: none;
+}
+div.complete fieldset{
+	margin: 0 auto;
+	background: transparent;
+	max-width: 420px;
+	min-width: 320px;
+}
+div.complete h1{
+	font-size: 5em;
+	margin-top: 100px;
+	margin-bottom: 20px;
+	font-weight: 800;
+	text-align: center;
+	@include mq(small){
+		font-size: 5.5rem;
+	}
+}
+div.complete span.check{
+	font-weight: 800;
+	font-size: 50px;
+	display: block;
+	width: 100px;
+	height: 100px;
+	line-height: 80px;
+	text-align: center;
+	border-radius: 50%;
+	border: 10px solid #4990E2;
+	color: #4990E2;
+	margin: 0 auto;
+}
