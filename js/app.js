@@ -70,18 +70,20 @@ for(var i=0; i<colorGroupLIS.length; i++){
 };
 
 // ***********************************************
-// Input Form Validation
+// Check Form Validity
 // ***********************************************
 function CheckValidity(input, type){
 	this.input = input;
 	this.type = type;
 	this.errors = [];
+	this.display();
 };
 CheckValidity.prototype.addError = function(message){
 	this.errors.push(message);
 };
 CheckValidity.prototype.getMessages = function(){
 	var status = this.input.validity;
+	this.errors = [];
 
 	if(status.valueMissing){
 		this.addError(this.type + " field is required");
@@ -92,23 +94,33 @@ CheckValidity.prototype.getMessages = function(){
 	}
 
 	return (this.errors.length>0)?this.errors:false;
+};
+CheckValidity.prototype.display = function(){
+	var msgs = this.getMessages();
+	if(msgs){
+		errors.style.display = "block";
+		msgs.forEach(function(msg){
+			errors.innerHTML += msg + '<br>';
+		});
+	}
 
 };
 
-
+// ***********************************************
+// Form Submit Process
+// ***********************************************
 form.addEventListener('click', function(e){
 	
 	errors.innerHTML = "";
 	errors.style.display = "none";
 	e.preventDefault();
 	var name = new CheckValidity(iname, 'Name');
-	var nameMsgs = name.getMessages();
-	if(nameMsgs){
-		errors.style.display = "block";
-		nameMsgs.forEach(function(msg){
-			errors.innerHTML += msg + '<br>';
-		});
-	}
+	var email = new CheckValidity(iemail, 'Email');
+	var address = new CheckValidity(iadd1, 'Address');
+	var city = new CheckValidity(icity, 'City');
+	var state = new CheckValidity(istate, 'State');
+	var zip = new CheckValidity(izip, 'Zip Code');
+	var country = new CheckValidity(icountry, 'Country');
 
 });
 
